@@ -27,9 +27,12 @@
 }
 
 html{
+    background-color: var(--gray-1);
     font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; ;
 }
-
+.bg-primary{
+    background-color: var(--gray-1);
+}
 .app{
     height: 100vh;
     width: 100vw;
@@ -40,4 +43,18 @@ html{
     color: var(--gray-11);
     font-family: 'Inter', sans-serif;
     
+}
+.text-primary{
+    color: var(--gray-12);
+    font-family: 'Inter', sans-serif;
+
+}
+.header{
+    color: var(--gray-12) !important;
+}
+.inter{
+    font-family: 'Inter', sans-serif !important;
+}
+.text-secondary:hover{
+    color: white !important;
 }
