@@ -13,7 +13,7 @@ function About() {
         <img src={lang} className='language object-cover h-56 mx-auto mt-6 md:h-96  mb-24 animate__animated animate__fadeInUp' />
       </div>
       <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp'>
-        <h2 className='md:w-32 text-secondary shrink-0 text-xl'>
+        <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0 '>
           About
         </h2>
         <div className="flex flex-col gap-6">
@@ -24,8 +24,8 @@ function About() {
         </div>
 
       </section>
-      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse  animate__animated animate__fadeInUp'>
-        <h2 className='md:w-32 text-secondary shrink-0 text-xl'>
+      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse  animate__animated animate__fadeInUp mb-20'>
+        <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0'>
           Skills
         </h2>
         <div className="flex flex-col gap-6">
@@ -112,19 +112,20 @@ function About() {
       </section>
 
       <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp'>
-        <h2 className='md:w-32 text-secondary shrink-0 text-xl'>
+        <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0'>
           Work 
         </h2>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 ">
           <p className='text-primary font-normal tracking-wide'>1yr+ Experience in full stack developement</p>
           <p className='text-primary font-normal tracking-wide'>My unwavering passion for creating and building has propelled me to where I am today. Through freelancing and hands-on experience with cutting-edge technologies, I've not only landed lucrative gigs but also secured a coveted internship in just a matter of months on my journey as a full-stack developer. </p>
-          <div className='jobs flex '>
-             <div className="job flex flex-wrap justify-between items-center">
-              <div className='flex'>
+          <div className='jobs flex  '>
+             <div className="job flex flex-wrap justify-between items-center hover:bg-stone-900 px-5 py-6 rounded-lg max-w-[500px] w-[500px] cursor:pointer">
+              <div className='flex items-center'>
               <img src={cut} className='h-10'/>
-              ,<p className='text-primary '>Full stack Web Dev Intern</p>
+              <p className='text-primary ml-4 hover:text-white'>Full stack Web Dev Intern</p>
               </div>
-      
+              <p className='text-secondary font-lighter tracking-wide'>2023</p>
+            
 
              </div>
           </div>
