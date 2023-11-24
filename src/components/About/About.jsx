@@ -1,9 +1,50 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import './About.css'
 import Typed from 'react-typed';
+import { ToastContainer, toast } from 'react-toastify';
 import cut from '../../assets/cut.png'
 import lang from '../../assets/lang.png'
+
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
 function About() {
+
+
+  function showMessage() {
+    toast('🙏 We\'re currently working on our website to make it even better! In the meantime, feel free to explore Vineet\'s Den and enjoy your visit!', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
+
+
+  function showText(){
+    toast('😉 Yeah , You read that right', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
+  // useEffect(()=>{
+  //   showMessage();
+  // },[])
   return (
     <div className='px-6 md:px-6 pt-16 pb-24 md:pt-20 md:pb-44 max-w-[690px] mx-auto'>
       <div>
@@ -23,12 +64,12 @@ function About() {
 
 
            </h1>
-        <p className='text-secondary animate__animated animate__fadeInUp font-light mt-2  md:text-xl text-sm text-center cursor-pointer'>A 19 year old exploring the amazingness of tech</p>
+        <p className='text-secondary animate__animated animate__fadeInUp font-light mt-2  md:text-xl text-sm text-center cursor-pointer' onClick={showText}>A 19 year old exploring the amazingness of tech</p>
       </div>
       <div>
         <img src={lang} className='language object-cover h-56 mx-auto mt-10 md:h-96  mb-24 animate__animated animate__fadeInUp' />
       </div>
-      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp'>
+      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp' id="about">
         <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0 cursor-pointer '>
           About
         </h2>
@@ -41,7 +82,7 @@ function About() {
         </div>
 
       </section>
-      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse  animate__animated animate__fadeInUp mb-20'>
+      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse  animate__animated animate__fadeInUp mb-20'  id="skills">  
         <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0 cursor-pointer'>
           Skills
         </h2>
@@ -128,27 +169,57 @@ function About() {
 
       </section>
 
-      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp'>
+      <section className='flex flex-col md:flex-row gap-2 md:gap-9 col-reverse mb-20 md:md-20 animate__animated animate__fadeInUp'  id="Work">
         <h2 className='md:w-32 text-secondary shrink-0 text-xl mb-5 md:mb-0 cursor-pointer'>
           Work
         </h2>
         <div className="flex flex-col gap-6 ">
           <p className='text-primary font-normal tracking-wide'>1yr+ Experience in full stack developement</p>
           <p className='text-primary font-normal tracking-wide'>My unwavering passion for creating and building has propelled me to where I am today. Through freelancing and hands-on experience with cutting-edge technologies, I've not only landed lucrative gigs but also secured a coveted internship in just a matter of months on my journey as a full-stack developer. </p>
-          <div className='jobs flex  '>
-            <div className="job flex flex-nowrap justify-between items-center group hover:bg-stone-900 px-5 py-6 rounded-lg max-w-[500px] w-[500px] cursor:pointer">
-              <div className='flex items-center flex-nowrap group'>
-                <img src={cut} className='h-10' />
-                <p className='text-primary ml-4 group-hover:text-white'>Full stack Web Dev Intern</p>
+          <div className='jobs flex  cursor-pointer flex-col'>
+            <div className="job flex flex-nowrap justify-normal md:justify-between items-center group hover:bg-stone-900 px-5 py-6 rounded-lg max-w-[500px] w-[350px] md:w-[500px] cursor:pointer ">
+              <div className='flex items-center flex-nowrap group w-[70%] '>
+                <img src={cut} className='h-10 ' />
+                <div>
+                <p className='text-primary ml-4 group-hover:text-white'>Full stack Intern</p>
+                <p className='text-sm text-stone-500 ml-4 '>The Sparks Foundation</p>
+                </div>
               </div>
-              <p className='text-secondary font-lighter tracking-wide'>2023</p>
-
-
+              <p className='text-secondary font-lighter tracking-wide mb-6 text-sm md:text-base  w-[30%]'>Oct-Nov 2023</p>
             </div>
+
+            <div className="job flex flex-nowrap justify-normal md:justify-between items-center group hover:bg-stone-900 px-5 py-6 rounded-lg max-w-[500px] w-[350px] md:w-[500px] cursor:pointer ">
+              <div className='flex items-center flex-nowrap group w-[70%] '>
+                <img src={cut} className='h-10  ' />
+                <div>
+                <p className='text-primary ml-4 group-hover:text-white'>Freelancer</p>
+                <p className='text-sm text-stone-500 ml-4 '>Self-Employed</p>
+                </div>
+              </div>
+              <p className='text-secondary font-lighter tracking-wide mb-6 text-sm md:text-base  w-[30%]'>Present 2023</p>
+            </div>
+            
           </div>
         </div>
 
       </section>
+
+
+      <ToastContainer
+position="bottom-left"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
+
+
+
     </div>
   )
 }
