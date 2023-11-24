@@ -17,17 +17,17 @@ function Nav() {
 
                </a>
             <ul class="hidden md:flex items-center gap-1">
-               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800" >
-                  <a class="text-secondary text-sm text-base hover:text-white font-medium tracking-wide" href="/about">About</a>
+               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800 group" >
+                  <a class="text-secondary text-sm text-base group-hover:text-white font-medium tracking-wide " href="/about">About</a>
                </li>
-               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800" >
-                  <a class="text-secondary text-sm text-base hover:text-white font-medium tracking-wide" href="/about">Blog</a>
+               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800  group" >
+                  <a class="text-secondary text-sm text-base group-hover:text-white font-medium  tracking-wide" href="/about">Blog</a>
                </li>
-               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800" >
-                  <a class="text-secondary text-sm text-base hover:text-white font-medium tracking-wide" href="/about">Project</a>
+               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800 group" >
+                  <a class="text-secondary text-sm text-base group-hover:text-white font-medium  tracking-wide" href="/about">Project</a>
                </li>
-               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800" >
-                  <a class="text-secondary text-sm text-base hover:text-white font-medium tracking-wide" href="/about">Video</a>
+               <li className="cursor-pointer px-4 py-2 rounded-lg hover:bg-stone-800 group" >
+                  <a class="text-secondary text-sm text-base group-hover:text-white font-medium  tracking-wide" href="/about">Video</a>
                </li>
             </ul>
             <div className='md:hidden relative ml-auto'>

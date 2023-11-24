@@ -58,3 +58,6 @@ html{
 .text-secondary:hover{
     color: white !important;
 }
+.editor-bg{
+ background-color: #041447;    
+}
